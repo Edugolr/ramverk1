@@ -5,7 +5,7 @@ Min me-sida i kursen Ramverk1
 =========================
 
 
-[FIGURE class="floatright" src="image/me.jpg?h=250"]
+[FIGURE class="right" src="image/me.jpg?h=250"]
 
 Hej jag är en 32 årig Boråsare, jag är ganska ny vad gäller webbprogrammering.
 Jag har haft ett varierat yrkesliv. Mitt första jobb var på ett bokbinderi där jag mest stansade häftade och skar reklam i olika former.

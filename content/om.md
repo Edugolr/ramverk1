@@ -22,4 +22,4 @@ Om
 
 Här skriver vi något litet med kanske framöver.
 
-[FIGURE src=image/framework.jpg?w=300]
+[FIGURE class="center" src=image/framework.jpg?w=300]
