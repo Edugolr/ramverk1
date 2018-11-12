@@ -5,11 +5,13 @@
     "minimum-stability": "beta",
     "prefer-stable": true,
     "autoload": {
-        "psr-4": {"Anax\\": "src/"}
+        "psr-4": {
+            "Anax\\": "src/",
+            "Chai17\\": "src/"
+        }
     },
     "require": {
-        "anax/anax-ramverk1-me": "^1.0.0",
-        "twbs/bootstrap": "4.1.3"
+        "anax/anax-ramverk1-me": "^1.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^7"

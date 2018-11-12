@@ -6,7 +6,7 @@ return [
     "routes" => [
         [
             "info" => "Sample Json Controller.",
-            "mount" => "json",
+            "mount" => "jsons",
             "handler" => "\Anax\Controller\SampleJsonController",
         ],
     ]
