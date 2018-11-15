@@ -4848,12 +4848,12 @@ html.hgrid .inner-wrap {
 }
 .toc .section-header {
   font-weight: bold;
-  border-bottom: 1px solid #d5e5d7;
+  border-bottom: 1px solid #41561f;
   margin-top: 24px;
   margin-bottom: 12px;
 }
 .toc .selected {
-  background-color: #d5e5d7;
+  background-color: #41561f;
   font-style: italic;
 }
 .article-toc .level-h2 {
@@ -4978,18 +4978,18 @@ h4:hover .header-anchor {
 }
 .breadcrumb-list li a:hover,
 .bullet-list li a:hover {
-  color: #d5e5d7;
+  color: #699c17;
   text-decoration: underline;
 }
 a {
-  color: #000;
+  color: #fff;
   text-decoration: underline;
 }
 a:visited {
-  color: #000;
+  color: #fff;
 }
 a:hover {
-  color: #d5e5d7;
+  color: #699c17;
   text-decoration: none;
 }
 .footer a {
@@ -5037,7 +5037,7 @@ a:hover {
 .blog-post .meta-header a:hover,
 .blog-list .meta-footer a:hover,
 .blog-post .meta-footer a:hover {
-  color: #d5e5d7;
+  color: #699c17;
   text-decoration: underline;
 }
 .blog-list .meta-footer ul,
@@ -5074,7 +5074,7 @@ a:hover {
   text-decoration: none;
 }
 .blog-list h1 a:hover {
-  color: #d5e5d7;
+  color: #699c17;
   text-decoration: underline;
 }
 .blog-post h1 {
@@ -5099,7 +5099,7 @@ a:hover {
   text-decoration: none;
 }
 .blog-toc .toc li a:hover {
-  color: #d5e5d7;
+  color: #699c17;
   text-decoration: underline;
 }
 /** --------------------------------------------------------------
@@ -5181,13 +5181,13 @@ fieldset {
 }
 html {
   overflow-y: scroll;
-  background-color: #1d3110;
+  background-color: #41561f;
 }
 body {
   margin: 0;
   padding: 0;
-  color: #111;
-  background-color: #6c7904;
+  color: #fff;
+  background-color: #000;
   font: 100.01%/1.5 Verdana, Geneva, sans-serif;
 }
 h1,
@@ -5316,7 +5316,7 @@ samp {
   border: 1px solid #ccc;
 }
 code {
-  background-color: #eee;
+  background-color: #455379;
 }
 pre,
 div.code,
@@ -5342,7 +5342,7 @@ pre code {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 0.5em;
-  background-color: #eee;
+  background-color: #455379;
 }
 ul,
 ol {
@@ -5520,7 +5520,7 @@ img {
 }
 .profile .ucp a,
 .profile .login a {
-  color: #3B440D;
+  color: #000;
 }
 .profile .ucp a:hover,
 .profile .login a:hover {
@@ -5822,7 +5822,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-navbar-top .rm-desktop li.selected a,
 .rm-navbar-top .rm-desktop a:hover {
-  color: #3B440D;
+  color: #000;
   text-shadow: 0px 0px 1px #9FB129;
   text-decoration: underline;
 }
@@ -6087,7 +6087,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Base
  */
 /** ==============================================================
- * Header 
+ * Header
  */
 /**
  * A header style for dbwebb.se.
@@ -6186,12 +6186,12 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   text-shadow: 2px -2px 2px #ccc;
 }
 .site-logo-text a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   transition: all 0.2s linear;
 }
 .site-logo-text a:hover {
-  color: #3B440D;
+  color: #000;
   text-shadow: 2px -2px 2px #9FB129;
 }
 .site-logo-text-icon img {
@@ -6286,7 +6286,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .sidebar .block h4 a:hover,
 .columns-above .block h4 a:hover,
 .columns-below .block h4 a:hover {
-  color: #d5e5d7;
+  color: #699c17;
   text-decoration: underline;
 }
 .article .block h4 a,
@@ -6301,7 +6301,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .sidebar .block h4 a:hover,
 .columns-above .block h4 a:hover,
 .columns-below .block h4 a:hover {
-  color: #3B440D;
+  color: #000;
   text-shadow: 0px 0px 1px #9FB129;
   text-decoration: underline;
 }
@@ -6313,7 +6313,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * A footer style for dbwebb.se.
  */
 .outer-wrap-footer {
-  background-color: #1d3110;
+  background-color: #41561f;
   padding-top: 24px;
   padding-bottom: 48px;
 }
@@ -6453,14 +6453,21 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   font-size: 1.5em;
   line-height: 0;
 }
+.rm-navbar-max.rm-navbar {
+  display: none;
+}
 .rm-menu-button {
   font-size: 1.5em;
 }
 .rm-desktop li ul {
-  background-color: #fff;
+  background-color: #000;
+}
+.rm-desktop li a {
+  color: #699c17;
+  background-color: #000;
 }
 .wrap-sidebar .block h4 {
-  background-image: linear-gradient(to right, #fff, #6c7904);
+  background-color: #000;
 }
 /**
  * My settings.

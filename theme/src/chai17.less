@@ -118,12 +118,12 @@ html.hgrid .inner-wrap {
  */
 @import "@desinax/link/less/toc.less";
 // Cleanup theses
-@tocColor:            #d5e5d7;
-@anchorColor:         #000;
+@tocColor:            #41561f;
+@anchorColor:         #fff;
 @anchorColor2:        #448;
-@anchorColorHover:    #d5e5d7;
-@anchorColorActive:   #d5e5d7;
-@anchorColorVisited:  #000;
+@anchorColorHover:    #699c17;
+@anchorColorActive:   #699c17;
+@anchorColorVisited:  #fff;
 
 @anchorColorAnonymous:      @colorBody;
 @anchorColorAnonymousHover: #00c;
@@ -208,27 +208,44 @@ html.hgrid .inner-wrap {
     line-height: 0;
 }
 
+.rm-navbar-max.rm-navbar {
+    display: none;
+}
+
 .rm-menu-button {
     font-size: 1.5em;
 }
 
 .rm-desktop li ul {
-    background-color: #fff;
+    background-color: #000;
+}
+
+.rm-desktop li a {
+    color: #699c17;
+    background-color: #000;
 }
 
 .wrap-sidebar .block h4 {
     // border-top: 1px solid #ccc;
-    background-image: linear-gradient(to right, #fff, #6c7904);
+    // background-image: linear-gradient(to right, #fff, #6c7904);
+    background-color:  #000;
 }
-
 
 
 /**
  * My settings.
  */
-@bgColorHtml: #1d3110;
-@bgColorBody: #6c7904;
-@colorBody:   #111;
+
+@bgColorHtml: #41561f;
+@bgColorBody: #000;
+@colorBody:   #fff;
+
+@colorAccentHeader1: #000;
+@colorSiteTitleShadow: #fff;
+@colorSiteTitle: #fff;
+
+@bgColorCodeInline:     #455379;
+@bgColorCodeBlock:      #455379;
 
 @fontFamilyHeadings: @fontFamilyCambria;
 @fontFamilyBody:     @fontFamilyVerdana;

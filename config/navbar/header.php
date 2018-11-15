@@ -52,6 +52,20 @@ return [
             "text" => "Ip-validator",
             "url" => "ipvalidate",
             "title" => "Ip validator",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Standard",
+                        "url" => "ipvalidate",
+                        "title" => "Ipvalidate",
+                    ],
+                    [
+                        "text" => "Json",
+                        "url" => "ipvalidatejson",
+                        "title" => "Ipvalidate Json",
+                    ],
+                ],
+            ],
         ],
     ],
 ];

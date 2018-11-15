@@ -4,87 +4,42 @@ namespace Chai17\IpValidatorJson;
 
 use Anax\Commons\ContainerInjectableInterface;
 use Anax\Commons\ContainerInjectableTrait;
-
-// use Anax\Route\Exception\ForbiddenException;
-// use Anax\Route\Exception\NotFoundException;
-// use Anax\Route\Exception\InternalErrorException;
-
+use Chai17\Models;
 /**
- * A sample JSON controller to show how a controller class can be implemented.
- * The controller will be injected with $di if implementing the interface
- * ContainerInjectableInterface, like this sample class does.
- * The controller is mounted on a particular route and can then handle all
- * requests for that mount point.
+ * Style chooser controller loads available stylesheets from a directory and
+ * lets the user choose the stylesheet to use.
  */
 class IpValidatorJsonController implements ContainerInjectableInterface
 {
     use ContainerInjectableTrait;
 
+    private $access_key = '2a0e9de90275d9ee18806e72160162ca';
+    private $url = "http://api.ipstack.com/";
 
-
-    /**
-     * @var string $db a sample member variable that gets initialised
-     */
-    private $db = "not active";
-
-
-    /**
-     * The initialize method is optional and will always be called before the
-     * target method/action. This is a convienient method where you could
-     * setup internal properties that are commonly used by several methods.
-     *
-     * @return void
-     */
-    public function initialize() : void
+    // json
+    public function indexAction() : object
     {
-        // Use to initialise member variables.
-        $this->db = "active";
+        $title = "Ip validator";
+        $session = $this->di->get("session");
+        $getipInfo = New Models\Curl;
+        $extra =  "&fields=ip";
+        $userIp =  $getipInfo->cUrl($this->url, "check", $this->access_key, $extra);
+        $api_result = json_decode($userIp, true);
+        $session->set("userIp", $api_result);
+        $page = $this->di->get("page");
+
+        $page->add("ipvalidatejson/index", [
+            "ip" => $session->get("userIp"),
+        ]);
+
+        return $page->render([
+            "title" => $title,
+        ]);
     }
-
-
-
-    /**
-     * This is the index method action, it handles:
-     * GET METHOD mountpoint
-     * GET METHOD mountpoint/
-     * GET METHOD mountpoint/index
-     *
-     * @return array
-     */
-     // deal with empty get
-    public function indexActionGet() : array
-    {
-
-        // Deal with the action and return a response.
-        $json = [
-            "message" => "No content",
-        ];
-        return [$json, 204];
-    }
-
-
-
-    /**
-     * This sample method dumps the content of $di.
-     * GET mountpoint/dump-app
-     *
-     * @return array
-     */
-    public function dumpDiActionGet() : array
-    {
-        // Deal with the action and return a response.
-        $services = implode(", ", $this->di->getServices());
-        $json = [
-            "message" => __METHOD__ . "<p>\$di contains: $services",
-            "di" => $this->di->getServices(),
-        ];
-        return [$json];
-    }
-
-    public function indexActionPost() : array
+    public function standardActionGet()
     {
         $request = $this->di->get("request");
-        $ipNumber = $request->getPost("ip");
+        $ipNumber = $request->getGet("ip");
         $hostname = "NA";
         $type = "Not valid";
 
@@ -102,19 +57,13 @@ class IpValidatorJsonController implements ContainerInjectableInterface
         ];
         return [$json, 200];
     }
-
-    /**
-     * Try to access a forbidden resource.
-     * ANY mountpoint/forbidden
-     *
-     * @return array
-     */
-    public function forbiddenAction() : array
+    public function locationActionGet()
     {
-        // Deal with the action and return a response.
-        $json = [
-            "message" => __METHOD__ . ", forbidden to access.",
-        ];
-        return [$json, 403];
+        $getipInfo = New Models\Curl;
+        $request = $this->di->get("request");
+        $ipNumber = $request->getGet("ip");
+
+        $json = $getipInfo->cUrl($this->url, $ipNumber, $this->access_key);
+        return [$json];
     }
 }
