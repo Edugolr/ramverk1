@@ -6469,6 +6469,9 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .wrap-sidebar .block h4 {
   background-color: #000;
 }
+.inner-wrap-main {
+  min-height: 100vh;
+}
 /**
  * My settings.
  */

@@ -16,13 +16,13 @@ class IpValidatorController implements ContainerInjectableInterface
     public function indexActionGet() : object
     {
         $title = "Ip validator";
+        $page = $this->di->get("page");
         $session = $this->di->get("session");
         $getipInfo = new Models\Curl;
         $extra =  "&fields=ip";
         $userIp =  $getipInfo->cUrl($this->url, "check", $this->accessKey, $extra);
         $apiResult = json_decode($userIp, true);
         $session->set("userIp", $apiResult["ip"]);
-        $page = $this->di->get("page");
 
         $page->add("ipvalidate/index", [
             "ip" => $session->get("userIp"),
@@ -60,7 +60,7 @@ class IpValidatorController implements ContainerInjectableInterface
         return $page->render([
         ]);
     }
-    
+
     // location
     public function locationActionPost() : object
     {

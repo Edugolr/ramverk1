@@ -12,18 +12,14 @@ use Anax\Commons\ContainerInjectableTrait;
  */
 class TraverseArray
 {
-    function traverseArray($array)
+    public function traverseArray($array)
     {
         // Loops through each element. If element again is array, function is recalled. If not, result is echoed.
-        foreach ($array as $key => $value)
-        {
-            if (is_array($value))
-            {
-                Self::traverseArray($value); // Or
+        foreach ($array as $key => $value) {
+            if (is_array($value)) {
+                self::traverseArray($value); // Or
                 // traverseArray($value);
-            }
-            else
-            {
+            } else {
                 echo $key . " = " . $value . "<br />\n";
             }
         }

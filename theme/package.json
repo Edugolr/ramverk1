@@ -32,8 +32,8 @@
     "@desinax/responsive-menu": "^1.1.4",
     "@desinax/typographic-grid": "^1.0.2",
     "@desinax/vertical-grid": "^1.0.3",
-    "@fortawesome/fontawesome-free": "^5.4.2",
-    "normalize.css": "^8.0.0"
+    "@fortawesome/fontawesome-free": "^5.5.0",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "@desinax/css-styleguide": "^1.0.0",
@@ -43,6 +43,6 @@
     "jsonlint": "^1.6.3",
     "less": "^3.8.1",
     "less-plugin-clean-css": "^1.5.1",
-    "stylelint": "^9.6.0"
+    "stylelint": "^9.8.0"
   }
 }
