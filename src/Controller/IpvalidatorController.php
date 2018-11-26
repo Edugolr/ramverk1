@@ -10,17 +10,16 @@ class IpValidatorController implements ContainerInjectableInterface
 {
     use ContainerInjectableTrait;
 
-    private $accessKey = '2a0e9de90275d9ee18806e72160162ca';
-    private $url = "http://api.ipstack.com/";
-
     public function indexActionGet() : object
     {
+        $api = $this->di->get("ipstack");
+        $ipstack = $api["config"];
         $title = "Ip validator";
         $page = $this->di->get("page");
         $session = $this->di->get("session");
         $getipInfo = new Models\Curl;
         $extra =  "&fields=ip";
-        $userIp =  $getipInfo->cUrl($this->url, "check", $this->accessKey, $extra);
+        $userIp =  $getipInfo->cUrl($ipstack["url"]. "check". '?access_key='. $ipstack["key"]. $extra);
         $apiResult = json_decode($userIp, true);
         $session->set("userIp", $apiResult["ip"]);
 
@@ -64,22 +63,26 @@ class IpValidatorController implements ContainerInjectableInterface
     // location
     public function locationActionPost() : object
     {
+        $api = $this->di->get("ipstack");
+        $ipstack = $api["config"];
         $title = "Location";
         $getipInfo = new Models\Curl;
+        $map = new Models\Map;
         $page = $this->di->get("page");
         $request = $this->di->get("request");
         $session = $this->di->get("session");
         $ipNumber = $request->getPost("ip");
         $extra =  "";
-        $json = $getipInfo->cUrl($this->url, $ipNumber, $this->accessKey, $extra);
+        $json = $getipInfo->cUrl($ipstack["url"]. $ipNumber. '?access_key='. $ipstack["key"]. $extra);
 
 
         // Decode JSON response:
         $apiResult = json_decode($json, true);
-
+        $mapDiv = $map->getMap($apiResult["latitude"], $apiResult["longitude"]);
         $page->add("ipvalidate/index", [
             "res" => $apiResult,
             "ip" => $session->get("userIp"),
+            "mapDiv" => $mapDiv,
         ]);
 
         return $page->render([

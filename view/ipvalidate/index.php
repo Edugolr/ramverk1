@@ -2,7 +2,6 @@
 namespace Anax\View;
 
 ?>
-
 <h1>Ip validator standard</h1>
 Choose format
 <form action="">
@@ -41,5 +40,9 @@ if (isset($res)) {
         </div>
     </div>
     <?php
+}
+
+if (isset($mapDiv)) {
+    echo $mapDiv;
 }
 ?>

@@ -62,16 +62,15 @@ $route = "route-" . str_replace("/", "-", $di->get("request")->getRoute());
     <meta charset="<?= $charset ?>">
     <title><?= $title ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <?php if (isset($favicon)) : ?>
     <link rel="icon" href="<?= asset($favicon) ?>">
     <?php endif; ?>
-
     <?php if (isset($stylesheets)) : ?>
         <?php foreach ($stylesheets as $stylesheet) : ?>
             <link rel="stylesheet" type="text/css" href="<?= asset($stylesheet) ?>">
         <?php endforeach; ?>
     <?php endif; ?>
+
 
     <?php if (isset($style)) : ?>
     <style><?= $style ?></style>
@@ -286,6 +285,7 @@ $class .= empty($class) ? "" : "has-sidebar";
 
 
 </div> <!-- end of wrapper -->
+
 
 
 

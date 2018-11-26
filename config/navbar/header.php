@@ -49,6 +49,16 @@ return [
             "title" => "Verktyg och möjligheter för utveckling.",
         ],
         [
+            "text" => "Väder",
+            "url" => "weather",
+            "title" => "Väder prognoser",
+        ],
+        [
+            "text" => "REST API",
+            "url" => "api",
+            "title" => "REST API dokumentation",
+        ],
+        [
             "text" => "Ip-validator",
             "url" => "ipvalidate",
             "title" => "Ip validator",

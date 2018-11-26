@@ -89,14 +89,14 @@ img.responsive {
  */
 @import "@desinax/vertical-grid/less/grid.less";
 
-html.vgrid .inner-wrap {
-    @gridImage: "../img/theme/grid950x24x30x10-nomargin.png";
-    #desinax-vgrid.showGrid(1100px, @gridImage);
-
-    &.inner-wrap-header {
-        #desinax-vgrid.showGrid(100%, @gridImage);
-    }
-}
+// html.vgrid .inner-wrap {
+//     @gridImage: "../img/theme/grid950x24x30x10-nomargin.png";
+//     #desinax-vgrid.showGrid(1100px, @gridImage);
+//
+//     &.inner-wrap-header {
+//         #desinax-vgrid.showGrid(100%, @gridImage);
+//     }
+// }
 
 
 
@@ -235,6 +235,173 @@ html.hgrid .inner-wrap {
     min-height: 100vh;
 }
 
+#mapdiv {
+    clear: both;
+    height: 400px;
+}
+
+.tempHigh {
+    color: #fd0015;
+}
+
+.tempLow {
+    color: #7dcef3;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+
+.bgColorHtml {
+    background-color: #41561f;
+    color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+.clear-day {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/clear-day.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.clear-night {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/clear-night.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.partly-cloudy-day {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/partly-cloudy-day.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.partly-cloudy-night {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/partly-cloudy-night.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.cloudy {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/cloudy.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.rain {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/rain.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sleet {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/sleet.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.snow {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/snow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.wind {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/wind.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.fog {
+    content: '';
+    display: block;
+    height: 80px;  /*height of icon */
+    width: 80px;  /*width of icon */
+      /*where to replace the icon */
+    top: 0px;
+    left: -40px;
+      /*background */
+    background-image:url(../img/DarkSky-icons/SVG/fog.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 /**
  * My settings.
  */

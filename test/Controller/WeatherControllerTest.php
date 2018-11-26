@@ -4,15 +4,13 @@ namespace Anax\Controller;
 
 use Anax\DI\DIFactoryConfig;
 use PHPUnit\Framework\TestCase;
-use Anax\Request\Request as Request;
 
 /**
- * Test the SampleJsonController.
+ * Test the SampleController.
  */
-class IpValidatorJsonControllerTest extends TestCase
+class WeatherControllerTest extends TestCase
 {
 
-    // Create the di container.
     protected $di;
     protected $controller;
 
@@ -33,43 +31,23 @@ class IpValidatorJsonControllerTest extends TestCase
         $di = $this->di;
 
         // Setup the controller
-        $this->controller = new IpValidatorJsonController();
+        $this->controller = new WeatherController();
         $this->controller->setDI($this->di);
         // $this->controller->initialize();
     }
 
+    /**
+     * Test the route "index".
+     */
     public function testIndexActionGet()
     {
         $res = $this->controller->indexActionGet();
         $this->assertInstanceOf("\Anax\Response\Response", $res);
+
+        // $this->assertEquals('some value', var_dump($res), '$b is not equal to "some value", instead it is instead: ' . var_dump($res));
     }
 
-    /**
-     * Test the route "standard".
-     */
-    public function testStandardActionGet()
-    {
-        $request = $this->di->get("request");
-        $request->setGet("ip", "37.123.148.64");
-        $res = $this->controller->standardActionGet();
-        $this->assertInternalType("array", $res);
-
-        $request = $this->di->get("request");
-        $request->setGet("ip", "2001:0db8:85a3:0000:0000:8a2e:0370:7334");
-        $res = $this->controller->standardActionGet();
-        $this->assertInternalType("array", $res);
-    }
-
-    /**
-     * Test the route "location".
-     */
-    public function testLocationActionGet()
-    {
-        $res = $this->controller->locationActionGet();
-        $this->assertInternalType("array", $res);
-    }
-
-    // test the weather get
+    // test the index post
     public function testWeatherActionGet()
     {
 
@@ -77,26 +55,26 @@ class IpValidatorJsonControllerTest extends TestCase
         $request = $this->di->get("request");
         $request->setGet("ip", "37.123.148.64");
         $res = $this->controller->weatherActionGet();
-        $this->assertInternalType("array", $res);
+        $this->assertInstanceOf("\Anax\Response\Response", $res);
 
         //test city
         $request->setGet("ip", "stockholm");
         $res = $this->controller->weatherActionGet();
-        $this->assertInternalType("array", $res);
+        $this->assertInstanceOf("\Anax\Response\Response", $res);
     }
 
-    // test the weatherOld get
+    // test the location post
     public function testWeatherOldActionGet()
     {
         // test ip
         $request = $this->di->get("request");
         $request->setGet("ip", "37.123.148.64");
         $res = $this->controller->weatherOldActionGet();
-        $this->assertInternalType("array", $res);
+        $this->assertInstanceOf("\Anax\Response\Response", $res);
         //test city
         $request->setGet("ip", "stockholm");
         $res = $this->controller->weatherOldActionGet();
-        $this->assertInternalType("array", $res);
+        $this->assertInstanceOf("\Anax\Response\Response", $res);
         // $this->assertEquals('some value', var_dump($res), '$b is not equal to "some value", instead it is instead: ' . var_dump($res));
     }
 }

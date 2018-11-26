@@ -9,8 +9,7 @@ Choose format
     <form action="">
       <input type="radio" name="action" onclick="document.getElementById('ipvalidate').action='<?= url("ipvalidatejson/standard") ?>';"> Standard<br>
       <input type="radio" name="action" onclick="document.getElementById('ipvalidate').action='<?= url("ipvalidatejson/location") ?>';"> Location<br>
-      <input type="radio" name="action" onclick="document.getElementById('ipvalidate').action='<?= url("ipvalidatejson/weather") ?>';"> Weather forecast<br>
-      <input type="radio" name="action" onclick="document.getElementById('ipvalidate').action='<?= url("ipvalidatejson/weatherOld") ?>';"> Weather (30 days back)<br>
+      <input type="radio" name="action" onclick="document.getElementById('ipvalidate').action='<?= url("ipvalidatejson/weather") ?>';"> Weather<br>
     </form>
 </div>
 
