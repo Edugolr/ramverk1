@@ -32,7 +32,7 @@ return [
             "region" => "header-col-1",
             "template" => "anax/v2/header/site_logo",
             "data" => [
-                "class" => "large",
+                "class" => "small",
                 "siteLogo"      => "image/theme/leaf_256x256.png",
                 "siteLogoAlt"   => "Löv",
             ],
