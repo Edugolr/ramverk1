@@ -4,12 +4,6 @@
     "license": "MIT",
     "minimum-stability": "beta",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/Edugolr/anax-chai17-weather"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Anax\\": "src/",
