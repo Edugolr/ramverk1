@@ -26,6 +26,7 @@ html {
 /**
  * Remove the margin in all browsers.
  */
+ 
 body {
   margin: 0;
 }
@@ -4324,18 +4325,18 @@ template {
  * A small clearfix:
  * http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use
  */
-/** ------------------------------------------------------------------ 
+/** ------------------------------------------------------------------
  * Mixins
  */
-/** ------------------------------------------------------------------ 
+/** ------------------------------------------------------------------
  * Typography. Calculate font-size and line-height.
  */
-/** ------------------------------------------------------------------ 
+/** ------------------------------------------------------------------
  * Anchors.
  */
 /** --------------------------------------------------------------
  * CSS3 mixins.
- * 
+ *
  */
 /**
  * Desinax general modules, namespace #desinax-general. (You must enable
@@ -4407,7 +4408,7 @@ template {
   /*a {
       border: 8px solid #fff;
       display: inline-block;
-    
+
       &:hover {
         border-color: #eee;
       }
@@ -4584,7 +4585,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   font-size: 3em;
   padding-right: 0.5em;
 }
-/** ------------------------------------------------------------------ 
+/** ------------------------------------------------------------------
  * Revision history
  */
 /**
@@ -4782,10 +4783,10 @@ html.hgrid .inner-wrap {
  * Links and navigation
  * @TODO check and clean up
  */
-/** ------------------------------------------------------------------ 
+/** ------------------------------------------------------------------
  * Table of content menu
  */
-/** ------------------------------------------------------------------ 
+/** ------------------------------------------------------------------
  * toc in column
  */
 .toc {
@@ -5451,7 +5452,7 @@ img {
  * and other regions of the page including route specific styles.
  */
 /** ==============================================================
- * Horisontal grid setup 
+ * Horisontal grid setup
  */
 .inner-wrap {
   margin-right: auto;
@@ -5475,7 +5476,7 @@ img {
   clear: both;
 }
 /** ==============================================================
- * Header 
+ * Header
  */
 /*
 .site-header {
